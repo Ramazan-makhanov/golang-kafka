@@ -1,0 +1,10 @@
+version:3
+services:
+    golang:
+        build:
+            context: .
+            dockerfile: Dockerfile.multistage
+            port:
+                - 8000:8080
+    kafka:
+        image: ironpark/confluent-kafka-go
